@@ -1,4 +1,13 @@
-export type Region = "Kanto" | "Johto" | "Hoenn" | "Sinnoh" | "Unova";
+export type Region =
+  | "Kanto"
+  | "Johto"
+  | "Hoenn"
+  | "Sinnoh"
+  | "Unova"
+  | "Kalos"
+  | "Alola"
+  | "Galar"
+  | "Paldea";
 
 export type ContentStatus = "publicado" | "rascunho";
 
@@ -6,7 +15,9 @@ export type Platform =
   | "Game Boy"
   | "Game Boy Color"
   | "Game Boy Advance"
-  | "Nintendo DS";
+  | "Nintendo DS"
+  | "Nintendo 3DS"
+  | "Nintendo Switch";
 
 export type Difficulty = "Fácil" | "Médio" | "Difícil";
 

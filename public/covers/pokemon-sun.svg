@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Pokémon Sun">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7c74d"/>
+      <stop offset="100%" stop-color="#d88a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <circle cx="238" cy="58" r="62" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="86" cy="150" r="72" fill="rgba(255,255,255,0.08)"/>
+  <g transform="translate(52 30)">
+    <circle cx="100" cy="60" r="48" fill="#fff8df"/>
+    <circle cx="100" cy="60" r="26" fill="#f6d86a"/>
+    <path d="M100 12V0M100 120v-12M42 60h-12M182 60h-12M58 28l-8-8M142 112l8 8M58 92l-8 8M142 8l8-8" stroke="#fff8df" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="24" y="170" fill="#fffef7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Pokémon Sun</text>
+</svg>

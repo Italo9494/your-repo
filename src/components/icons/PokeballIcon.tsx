@@ -1,9 +1,12 @@
+import type { CSSProperties } from "react";
+
 interface PokeballIconProps {
   className?: string;
   strokeWidth?: number;
+  style?: CSSProperties;
 }
 
-export function PokeballIcon({ className = "h-6 w-6", strokeWidth = 2 }: PokeballIconProps) {
+export function PokeballIcon({ className = "h-6 w-6", strokeWidth = 2, style }: PokeballIconProps) {
   return (
     <svg
       viewBox="0 0 48 48"
@@ -11,6 +14,7 @@ export function PokeballIcon({ className = "h-6 w-6", strokeWidth = 2 }: Pokebal
       aria-hidden="true"
       focusable="false"
       className={className}
+      style={style}
     >
       <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth={strokeWidth} />
       <path

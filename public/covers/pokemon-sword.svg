@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Pokémon Sword">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3a9ae9"/>
+      <stop offset="100%" stop-color="#1e5ba5"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <circle cx="242" cy="60" r="62" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="86" cy="150" r="76" fill="rgba(255,255,255,0.08)"/>
+  <g transform="translate(52 26)">
+    <path d="M54 100l70-78 28 28-52 52 20 20-24 24-42-46zm62-88l30 30-18 18-30-30 18-18z" fill="#eefaff"/>
+    <path d="M130 24l22 22-8 8-22-22 8-8zm-18 52l16 16-8 8-16-16 8-8z" fill="#d9f1ff"/>
+  </g>
+  <text x="18" y="170" fill="#f0f9ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Pokémon Sword</text>
+</svg>

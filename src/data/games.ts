@@ -253,6 +253,118 @@ export const games: Game[] = [
     colors: ["#e8eaf2", "#a9b0c4"],
     cover: "/covers/zekrom.png",
   },
+  {
+    slug: "pokemon-x",
+    name: "Pokémon X",
+    shortName: "X",
+    generation: 6,
+    platform: "Nintendo 3DS",
+    region: "Kalos",
+    year: 2013,
+    description:
+      "Uma jornada pela região de Kalos com foco em batalhas dinâmicas, Mega Evoluções e a rivalidade com o professor Sycamore.",
+    difficulty: "Difícil",
+    colors: ["#2f6fb7", "#1c4378"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+  },
+  {
+    slug: "pokemon-y",
+    name: "Pokémon Y",
+    shortName: "Y",
+    generation: 6,
+    platform: "Nintendo 3DS",
+    region: "Kalos",
+    year: 2013,
+    description:
+      "A versão que revela o brilho de Kalos sob a ótica de um enredo que expande a narrativa com Mega Evoluções e desafios de rota.",
+    difficulty: "Difícil",
+    colors: ["#f2b93a", "#bd7c00"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png",
+  },
+  {
+    slug: "pokemon-sun",
+    name: "Pokémon Sun",
+    shortName: "Sun",
+    generation: 7,
+    platform: "Nintendo 3DS",
+    region: "Alola",
+    year: 2016,
+    description:
+      "A aventura em Alola traz o toque tropical da região, o sistema de Z-Moves e o desafio de transformar o jeito de jogar.",
+    difficulty: "Difícil",
+    colors: ["#f7c74d", "#d88a18"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png",
+  },
+  {
+    slug: "pokemon-moon",
+    name: "Pokémon Moon",
+    shortName: "Moon",
+    generation: 7,
+    platform: "Nintendo 3DS",
+    region: "Alola",
+    year: 2016,
+    description:
+      "A versão da lua com o mesmo universo de Alola, mas com uma estrutura de jogo que destaca a cultura e a exploração da região.",
+    difficulty: "Difícil",
+    colors: ["#5a7bff", "#2d3ca5"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png",
+  },
+  {
+    slug: "pokemon-sword",
+    name: "Pokémon Sword",
+    shortName: "Sword",
+    generation: 8,
+    platform: "Nintendo Switch",
+    region: "Galar",
+    year: 2019,
+    description:
+      "A região de Galar leva a série para a geração mais moderna, com uma narrativa mais aberta e a dinâmica de uma liga única.",
+    difficulty: "Difícil",
+    colors: ["#3a9ae9", "#1e5ba5"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png",
+  },
+  {
+    slug: "pokemon-shield",
+    name: "Pokémon Shield",
+    shortName: "Shield",
+    generation: 8,
+    platform: "Nintendo Switch",
+    region: "Galar",
+    year: 2019,
+    description:
+      "A versão com foco nos desafios de Galar, gigantes no topo do mapa e a disputa pela coroação da liga regional.",
+    difficulty: "Difícil",
+    colors: ["#ef5d5d", "#aa2d2d"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
+  },
+  {
+    slug: "pokemon-scarlet",
+    name: "Pokémon Scarlet",
+    shortName: "Scarlet",
+    generation: 9,
+    platform: "Nintendo Switch",
+    region: "Paldea",
+    year: 2023,
+    description:
+      "Paldea abre a nona geração com mundo aberto, exploração livre e o grande desafio da Academia e da Liga Pokémon.",
+    difficulty: "Difícil",
+    colors: ["#f4735d", "#c2452f"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png",
+  },
+  {
+    slug: "pokemon-violet",
+    name: "Pokémon Violet",
+    shortName: "Violet",
+    generation: 9,
+    platform: "Nintendo Switch",
+    region: "Paldea",
+    year: 2023,
+    description:
+      "A versão violeta oferece a mesma base de Paldea com uma proposta de aventura mais focada em atmosfera e exploração.",
+    difficulty: "Difícil",
+    colors: ["#7d7ee9", "#4549b5"],
+    cover: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png",
+  },
 ];
 
 export const generationLabels: Record<number, string> = {
@@ -261,6 +373,10 @@ export const generationLabels: Record<number, string> = {
   3: "3ª geração",
   4: "4ª geração",
   5: "5ª geração",
+  6: "6ª geração",
+  7: "7ª geração",
+  8: "8ª geração",
+  9: "9ª geração",
 };
 
 export const platforms = [
@@ -268,9 +384,21 @@ export const platforms = [
   "Game Boy Color",
   "Game Boy Advance",
   "Nintendo DS",
+  "Nintendo 3DS",
+  "Nintendo Switch",
 ] as const;
 
-export const regions = ["Kanto", "Johto", "Hoenn", "Sinnoh", "Unova"] as const;
+export const regions = [
+  "Kanto",
+  "Johto",
+  "Hoenn",
+  "Sinnoh",
+  "Unova",
+  "Kalos",
+  "Alola",
+  "Galar",
+  "Paldea",
+] as const;
 
 export function getGame(slug: string): Game | undefined {
   return games.find((game) => game.slug === slug);

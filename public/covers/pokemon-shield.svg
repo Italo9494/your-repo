@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Pokémon Shield">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ef5d5d"/>
+      <stop offset="100%" stop-color="#aa2d2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <circle cx="246" cy="58" r="58" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="88" cy="148" r="72" fill="rgba(255,255,255,0.08)"/>
+  <g transform="translate(54 26)">
+    <path d="M52 94l64-68 52 64-36 34-46 0-34-30z" fill="#ffe9e9"/>
+    <path d="M64 68h52v14H64zM86 46h14v52H86z" fill="#f7b4b4"/>
+  </g>
+  <text x="18" y="170" fill="#fff3f3" font-family="Arial, sans-serif" font-size="20" font-weight="700">Pokémon Shield</text>
+</svg>

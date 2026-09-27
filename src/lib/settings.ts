@@ -178,16 +178,6 @@ export function validateSettings(
         fontFamily,
         accentColor,
       },
-      heroBadge: badge,
-      heroTitle: heroTitle,
-      heroSubtitle: heroSubtitle,
-      heroPrimaryButton: primaryButton,
-      heroSecondaryButton: secondaryButton,
-      heroTextColor: textColor,
-      heroTitleSize: titleSize,
-      heroSubtitleSize: subtitleSize,
-      heroFontFamily: fontFamily,
-      heroAccentColor: accentColor,
     },
   };
 }

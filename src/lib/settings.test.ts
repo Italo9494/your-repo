@@ -64,8 +64,8 @@ test("validateSettings accepts custom hero text and typography values", () => {
 
   assert.equal(result.ok, true);
   if (!result.ok) return;
-  assert.equal(result.value.heroTitle, "Detonados de Pokémon completos e incríveis");
-  assert.equal(result.value.heroAccentColor, "#d62e0b");
-  assert.equal(result.value.heroTitleSize, 58);
-  assert.equal(result.value.heroFontFamily, "'Trebuchet MS', sans-serif");
+  assert.equal(result.value.heroText.title, "Detonados de Pokémon completos e incríveis");
+  assert.equal(result.value.heroText.accentColor, "#d62e0b");
+  assert.equal(result.value.heroText.titleSize, 58);
+  assert.equal(result.value.heroText.fontFamily, "'Trebuchet MS', sans-serif");
 });
