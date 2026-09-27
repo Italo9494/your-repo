@@ -38,3 +38,34 @@ test("validateSettings rejects invalid hero background mode", () => {
   if (result.ok) return;
   assert.match(result.error, /modo do fundo/i);
 });
+
+test("validateSettings accepts custom hero text and typography values", () => {
+  const result = validateSettings({
+    siteName: "PokéDetonado",
+    siteDescription: "Descrição do site para testar",
+    maintenance: false,
+    heroBackground: {
+      mode: "color",
+      color: "#f5efe9",
+      opacity: 0.35,
+    },
+    heroBadge: "Guia independente em português",
+    heroTitle: "Detonados de Pokémon completos e incríveis",
+    heroSubtitle:
+      "Guias passo a passo para acompanhar sua aventura do primeiro passo à Liga Pokémon.",
+    heroPrimaryButton: "Ver detonados",
+    heroSecondaryButton: "Explorar jogos",
+    heroTextColor: "#111827",
+    heroTitleSize: 58,
+    heroSubtitleSize: 18,
+    heroFontFamily: "'Trebuchet MS', sans-serif",
+    heroAccentColor: "#d62e0b",
+  });
+
+  assert.equal(result.ok, true);
+  if (!result.ok) return;
+  assert.equal(result.value.heroTitle, "Detonados de Pokémon completos e incríveis");
+  assert.equal(result.value.heroAccentColor, "#d62e0b");
+  assert.equal(result.value.heroTitleSize, 58);
+  assert.equal(result.value.heroFontFamily, "'Trebuchet MS', sans-serif");
+});

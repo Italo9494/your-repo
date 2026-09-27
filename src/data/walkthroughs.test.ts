@@ -14,3 +14,14 @@ test("pokemon-red walkthrough includes full chapter structure and gym route cove
   assert.ok(walkthrough!.chapters.some((chapter) => chapter.title.includes("Erika") || chapter.title.includes("Celadon")));
   assert.ok(walkthrough!.chapters.some((chapter) => chapter.title.includes("Lorelei") || chapter.title.includes("Elite Four") || chapter.title.includes("Indigo")));
 });
+
+test("pokemon-blue walkthrough includes the same Kanto route coverage as the Red version", () => {
+  const walkthrough = getWalkthrough("pokemon-blue");
+
+  assert.ok(walkthrough, "walkthrough de pokemon-blue deve existir");
+  assert.ok(walkthrough!.chapters.length > 0, "deve ter capítulos publicados");
+  assert.equal(walkthrough!.chapters[0].title, "Pallet Town");
+  assert.ok(walkthrough!.chapters.some((chapter) => chapter.title.includes("Brock") || chapter.title.includes("Pewter")));
+  assert.ok(walkthrough!.chapters.some((chapter) => chapter.title.includes("Misty") || chapter.title.includes("Cerulean")));
+  assert.ok(walkthrough!.chapters.some((chapter) => chapter.title.includes("Giovanni") || chapter.title.includes("Viridian")));
+});
