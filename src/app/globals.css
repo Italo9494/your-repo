@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #f5f7fc;
+  --color-surface: #ffffff;
+  --color-ink: #171b26;
+  --color-muted: #5d667a;
+  --color-line: #e4e8f2;
+
+  --color-brand-red: #d62e0b;
+  --color-brand-red-dark: #b32409;
+  --color-brand-blue: #2a75bb;
+  --color-brand-blue-dark: #1d5a94;
+  --color-brand-yellow: #ffcb05;
+  --color-brand-yellow-dark: #e0ae00;
+  --color-brand-green: #3aa655;
+  --color-brand-green-dark: #1f7a3d;
+
+  --shadow-soft: 0 10px 30px -18px rgba(23, 27, 38, 0.45);
+  --shadow-card: 0 18px 40px -28px rgba(23, 27, 38, 0.55);
+  --shadow-pop: 0 22px 45px -25px rgba(42, 117, 187, 0.45);
+
+  --animate-rise: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade: fade 0.4s ease both;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-brand-yellow) 70%, white);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-brand-blue) 65%, white);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@utility card-hover {
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+@utility scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
